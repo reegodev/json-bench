@@ -31,8 +31,15 @@ yarn bench basic
 yarn bench stream-json
 ```
 
-## Results on a MacBook Pro M1 Pro 16 GB
+## Results on a MacBook Pro M1 Pro 16 GB with Node v16.15.1
 
 | basic | stream-json |
 |----|----|
-| <img src="./screenshots/basic.png" width="500"> |  <img src="./screenshots/stream-json.png" width="535"> |
+| <img src="./screenshots/mac-basic.png" width="500"> |  <img src="./screenshots/mac-stream-json.png" width="535"> |
+
+
+## Results on an AWS EC2 t3.medium instance (2 vCPU, 4GB) with Node v16.19.0
+
+| basic | stream-json |
+|----|----|
+| <img src="./screenshots/ec2-basic.png" width="525"> |  <img src="./screenshots/ec2-stream-json.png" width="535"> |
