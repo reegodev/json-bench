@@ -64,7 +64,7 @@ const run = async () => {
 
   Object.keys(stats).forEach((entrypoint) => {
     memoryTable.push(
-      [`${entrypoint.toLocaleString(undefined, { useGrouping: 'always' })} entries, ${stats[entrypoint].fileSize}MB`,
+      [`${Number(entrypoint).toLocaleString(undefined, { useGrouping: 'always' })} entries, ${stats[entrypoint].fileSize}MB`,
         `${(stats[entrypoint].memory.min / (1024 * 1024)).toFixed(2)}MB`,
         `${(stats[entrypoint].memory.max / (1024 * 1024)).toFixed(2)}MB`,
         `${(stats[entrypoint].memory.mean / (1024 * 1024)).toFixed(2)}MB`
@@ -80,7 +80,7 @@ const run = async () => {
 
   Object.keys(stats).forEach((entrypoint) => {
     timeTable.push(
-      [`${entrypoint.toLocaleString(undefined, { useGrouping: 'always' })} entries, ${stats[entrypoint].fileSize}MB`,
+      [`${Number(entrypoint).toLocaleString(undefined, { useGrouping: 'always' })} entries, ${stats[entrypoint].fileSize}MB`,
         `${(stats[entrypoint].time.min).toFixed(2)}ms`,
         `${(stats[entrypoint].time.max).toFixed(2)}ms`,
         `${(stats[entrypoint].time.mean).toFixed(2)}ms`

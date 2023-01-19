@@ -35,4 +35,4 @@ yarn bench stream-json
 
 | basic | stream-json |
 |----|----|
-| <img src="./screenshots/basic.png" width="500"> |  <img src="./screenshots/stream-json.png" width="500"> |
+| <img src="./screenshots/basic.png" width="500"> |  <img src="./screenshots/stream-json.png" width="535"> |
