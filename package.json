@@ -1,0 +1,15 @@
+{
+  "name": "json-bench",
+  "version": "1.0.0",
+  "main": "index.js",
+  "private": true,
+  "dependencies": {
+    "@faker-js/faker": "^7.6.0",
+    "cli-table3": "^0.6.3",
+    "stream-json": "^1.7.5"
+  },
+  "scripts": {
+    "generate": "node generator.js",
+    "bench": "node benchmark.js"
+  }
+}
