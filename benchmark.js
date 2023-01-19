@@ -50,9 +50,12 @@ const run = async () => {
     for (i=0; i<runs; i++) {
       const result = await parseData(entrypoint);
       results[entrypoint].push(result);
-      console.log(`${entrypoint}: run ${i+1} done`);
+
+      process.stdout.write('\033c' + `${entrypoint}: run ${i+1} done`);
     }
   }
+
+  process.stdout.write('\033c');
 
   const stats = calculateAllStats(results);
 
