@@ -9,10 +9,10 @@ const filePath = path.join('data', `${numberOfEntries}.json`)
 const { size } = fs.statSync(filePath);
 const fileSize = (size / (1024 * 1024)).toFixed(2);
 
-const stream = fs.createReadStream(filePath).pipe(streamArray.withParser());
-
 const initialMemory = process.memoryUsage();
 const initialTime = performance.now();
+
+const stream = fs.createReadStream(filePath).pipe(streamArray.withParser());
 
 stream.on('data', (event) => {
   // event.value is { host: ..., transferred_bytes: ..., start_time: ..., end_time: ....  }

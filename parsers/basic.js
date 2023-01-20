@@ -8,15 +8,16 @@ const filePath = path.join('data', `${numberOfEntries}.json`)
 const { size } = fs.statSync(filePath);
 const fileSize = (size / (1024 * 1024)).toFixed(2);
 
-const fileHandle = fs.readFileSync(filePath, 'utf-8')
-
 const initialMemory = process.memoryUsage();
 const initialTime = performance.now();
+
+const fileHandle = fs.readFileSync(filePath, 'utf-8')
 const entries = JSON.parse(fileHandle);
 for (const entry of entries) {
   // Loop through the array to simulate
   // a scenario closer to the goal
 }
+
 const finalTime = performance.now();
 const finalMemory = process.memoryUsage();
 
